@@ -36,9 +36,3 @@ resource "aws_lb_listener" "cint-code-challenge-alb-listener" {
   }
 }
 
-resource "aws_lb_target_group_attachment" "cint-code-challenge-ec2-target-group-attach" {
-  count            = length(aws_instance.cint-code-challenge-servers)
-  target_group_arn = aws_lb_target_group.cint-code-challenge-target-group.arn
-  target_id        = aws_instance.cint-code-challenge-servers[count.index].id
-}
-
