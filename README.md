@@ -15,7 +15,7 @@ What aspects need to be considered to make the code work in a CD pipeline (how d
 # Additions
 
 ## Bootstrap folder
-This is the create the initial bucket for a remote backend.
+This is to create the initial bucket for a remote backend.
 
 ## Challenge folder
 This is where the main resources sit. A summary/ high level overview of the additions made include an autoscaling group provisioning a min/max 2 servers. A loadbalancer that is able to access the servers. The servers are able to access the RDS. Secrets for RDS are managed by AWS secrets manager. 
